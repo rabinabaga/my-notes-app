@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header{
+    padding:20px ;
+    text-align: center;
+}
+.header-font{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+    font-size:2em ;
+}
+.top-container{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.title-font{
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.darkgreen-background{
+    background-color: #5AA953;
+}
+.lightgreen-background{
+    background-color: #7ADF71;
+}
+.main-section{
+    padding: 20px 25px 12px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 18px 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px 1px rgb(0, 0, 0);
+}
+.normal-button{
+    border: 1px solid black;
+    box-shadow: 0.5px 0.5px;
+
+}
+.close-button{
+    padding: 4px;
+}
+.close-button:hover{
+    cursor: pointer;
+}
+.submit-button{
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+}
+.close-button-section{
+    vertical-align: middle;
+}
+.add-notes-section{
+    padding: 40px;
+}
+.input-add-notes{
+    margin-right:4px;
+    padding: 4px;
+}
+.input-add-notes.description{
+    width: 300px;
+}
+.main-section .card:not(:last-child){
+    margin-bottom:10px ;
+}
+
