@@ -2,11 +2,12 @@ import { useRef } from "react";
 import "./App.css";
 import { useState } from "react";
 import { data } from "./data";
+import Card from './Card'
 
 export default function App() {
   const titleRef = useRef("");
   const descriptionRef = useRef("");
-  const [dataCards, setDataCards] = useState(datata);
+  const [dataCards, setDataCards] = useState(data);
 
   const removeCard = (key) => {
     let cards = dataCards.filter((datum) => datum.title !== key);
