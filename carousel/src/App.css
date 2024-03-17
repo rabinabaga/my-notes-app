@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.heading{
+    margin: 30px;
+    text-align: center;
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 4px;
+}
+
+section{
+    margin:auto;
+    width: 900px;
+    height: 70vh;
+    border: 0.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section img{
+    object-fit: cover;
+    width: 700px;
+    height: 100%;
+}
+.changeImageButton{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 6px;
+}
