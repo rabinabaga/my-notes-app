@@ -27,9 +27,9 @@ function App() {
     <>
       <p className="heading">Project 1: Carousel</p>
       <section className="carousel">
-        <button className="changeImageButton" onClick={handlePrevClick}>prev</button>
+        <button className="changeImageButton" onClick={handlePrevClick}>&larr;</button>
         <img src={images[activeIndex]} alt="" />
-        <button className="changeImageButton"  onClick={handleNextClick}>next</button>
+        <button className="changeImageButton"  onClick={handleNextClick}>&rarr;</button>
       </section>
     </>
   );
