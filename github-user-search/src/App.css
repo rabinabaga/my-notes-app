@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  padding: 30px;
+  min-height: 100vh;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.search-row{
+  padding: 15px 10px;
+}
+
+.search-button{
+  width: 50%;
+  background-color: #7FFF00;
+  padding: 9px 7px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+}
+.input-field{
+  width: 50%;
+  padding: 6px 6px;
+  border-radius: 3px;
+}
+
+.heading{
+  padding: 30px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 4px;
+}
+
+.secondary-heading{
+  font-size: 1.4rem ;
+  font-weight: 600;
+}

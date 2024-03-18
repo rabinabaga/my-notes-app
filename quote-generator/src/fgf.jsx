@@ -1,38 +1,25 @@
-import "./styles.css";
-import { useState, useEffect } from "react";
-
-function getRandomQuote(quotes) {
-  return quotes[Math.floor(Math.random() * quotes.length)];
-}
-
-export default function App() {
-  const [quotes, setQuotes] = useState([]);
-  const [quote, setQuote] = useState(null);
-
-  useEffect(() => {
-    fetch("https://type.fit/api/quotes")
-      .then((res) => res.json())
-      .then((json) => {
-        setQuotes(json);
-        setQuote(json[0]);
-      });
-  }, []);
-
-  function getNewQuote() {
-    setQuote(getRandomQuote(quotes));
-  }
-
-  return (
-    <main>
-      <h1>Project 3: Quote Generator</h1>
-      <section>
-        <button onClick={getNewQuote}>New Quote</button>
-        <h3>
-          <span>“</span>
-          {quote?.text}
-        </h3>
-        <i>- {quote?.author}</i>
-      </section>
-    </main>
-  );
-}
+{
+    "total_count": 333,
+    "incomplete_results": false,
+    "items": [
+      {
+        "login": "RABINA",
+        "id": 10548116,
+        "node_id": "MDQ6VXNlcjEwNTQ4MTE2",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10548116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/RABINA",
+        "html_url": "https://github.com/RABINA",
+        "followers_url": "https://api.github.com/users/RABINA/followers",
+        "following_url": "https://api.github.com/users/RABINA/following{/other_user}",
+        "gists_url": "https://api.github.com/users/RABINA/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/RABINA/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/RABINA/subscriptions",
+        "organizations_url": "https://api.github.com/users/RABINA/orgs",
+        "repos_url": "https://api.github.com/users/RABINA/repos",
+        "events_url": "https://api.github.com/users/RABINA/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/RABINA/received_events",
+        "type": "User",
+        "site_admin": false,
+        "score": 1.0
+      },
