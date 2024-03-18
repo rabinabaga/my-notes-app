@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "./App.css";
 import { useState } from "react";
 import { data } from "./data";
-import Card from './Card'
+import Card from "./Card";
 
 export default function App() {
   const titleRef = useRef("");
@@ -14,16 +14,30 @@ export default function App() {
     setDataCards(cards);
   };
 
-  const addCard = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const title = form.title.value;
+    const description = form.description.value;
     let cards = [...dataCards];
     cards.push({
-      title: `${titleRef.current.value}`,
-      description: `${descriptionRef.current.value}`,
+      title: title,
+      description: description,
     });
     setDataCards(cards);
-    titleRef.current.value = "";
-    descriptionRef.current.value = "";
+    form.reset();
   };
+
+  // const addCard = () => {
+  //   let cards = [...dataCards];
+  //   cards.push({
+  //     title: `${titleRef.current.value}`,
+  //     description: `${descriptionRef.current.value}`,
+  //   });
+  //   setDataCards(cards);
+  //   titleRef.current.value = "";
+  //   descriptionRef.current.value = "";
+  // };
   return (
     <div className="top-container">
       <div className="header darkgreen-background header-font">React Notes</div>
@@ -39,25 +53,30 @@ export default function App() {
         })}
         <div className="add-notes-section">
           <p className="title-font">Add Notes</p>
-          <input
-            type="text"
-            ref={titleRef}
-            className="input-add-notes"
-            placeholder="Add title"
-          />
-          <input
-            type="text"
-            ref={descriptionRef}
-            className="input-add-notes description"
-            placeholder="Add Description"
-          />
-          <button
-            onClick={addCard}
-            className="lightgreen-background normal-button submit-button"
-          >
-            {" "}
-            Submit
-          </button>
+          <form onSubmit={onSubmit}>
+            <input
+              type="text"
+              name="title"
+              ref={titleRef}
+              className="input-add-notes"
+              placeholder="Add title"
+            />
+            <input
+              type="text"
+              name="description"
+              ref={descriptionRef}
+              className="input-add-notes description"
+              placeholder="Add Description"
+            />
+            <button
+              type="submit"
+              // onClick={addCard}
+              className="lightgreen-background normal-button submit-button"
+            >
+              {" "}
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
