@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+background-color: #daa520;
+height: 100vh;
+width: 100w;
+padding: 30px;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 900;
+  font-size: 2.1rem;
+}
+
+.main {
+  font-family: sans-serif;
+  margin: 80px auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 35vw;
+  background-color: white;
+
+}
+.quote {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 700;
+}
+.new-quote-button {
+  background-color: #e5e5e5;
+  padding: 4px;
+  font-size: 0.8em;
+  border-radius: 3px;
+}
