@@ -1,0 +1,28 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.app{
+width: 40vw;
+margin: auto;
+}
+.heading{
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 900;
+  font-size: 2.1rem;
+}
+.options{
+  margin: 20px auto 10px;
+}
+.options label{
+  margin:5px;
+  padding:8px;
+}
+video{
+margin: auto;
+ object-fit: cover;
+ height: 50vh;
+ width: 40vw;
+}
