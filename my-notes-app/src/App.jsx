@@ -3,11 +3,13 @@ import "./App.css";
 import { useState } from "react";
 import { data } from "./data";
 import Card from "./Card";
+import AddNotes from "./AddNotes";
 
 export default function App() {
   const titleRef = useRef("");
   const descriptionRef = useRef("");
   const [dataCards, setDataCards] = useState(data);
+  const [newNote, setnewNote] = useState({title:"", description:""});
 
   const removeCard = (key) => {
     let cards = dataCards.filter((datum) => datum.title !== key);
@@ -51,33 +53,7 @@ export default function App() {
             />
           );
         })}
-        <div className="add-notes-section">
-          <p className="title-font">Add Notes</p>
-          <form onSubmit={onSubmit}>
-            <input
-              type="text"
-              name="title"
-              ref={titleRef}
-              className="input-add-notes"
-              placeholder="Add title"
-            />
-            <input
-              type="text"
-              name="description"
-              ref={descriptionRef}
-              className="input-add-notes description"
-              placeholder="Add Description"
-            />
-            <button
-              type="submit"
-              // onClick={addCard}
-              className="lightgreen-background normal-button submit-button"
-            >
-              {" "}
-              Submit
-            </button>
-          </form>
-        </div>
+       <AddNotes onSubmit={onSubmit}/>
       </div>
     </div>
   );
