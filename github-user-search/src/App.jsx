@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="app">
-      <p className="heading">Project 5: GitHub User Search</p>
+      <p className="heading">GitHub User Search</p>
       <section className="main">
         <section className="search-row">
           <input

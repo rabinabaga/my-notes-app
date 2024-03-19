@@ -34,10 +34,26 @@
   font-family: "Quicksand";
   font-weight: 700;
   font-size: 2rem;
+  color:rgb(153, 71, 236);
   padding: 4px;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: text 4s steps(15) infinite alternate;
+}
+@keyframes text {
+  0%{
+    width: 0ch;
+  }
+  50%{
+    width: 18ch;
+    color: #f31010;
+  }
 }
 
 .secondary-heading{
   font-size: 1.4rem ;
   font-weight: 600;
+  animation: none;
+  width: auto;
 }
