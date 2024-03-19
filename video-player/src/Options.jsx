@@ -1,0 +1,46 @@
+export default function Options({handleChange}){
+    return(<>
+        <section className="options">
+        <label>
+          <input
+            type="radio"
+            id="spider"
+            name="animal"
+            value="spider"
+            onChange={handleChange}
+          />
+          Spider
+        </label>
+        <label>
+          <input
+            type="radio"
+            id="snail"
+            name="animal"
+            value="snail"
+            onChange={handleChange}
+          />
+          Snail
+        </label>
+        <label>
+          <input
+            type="radio"
+            id="deer"
+            name="animal"
+            value="deer"
+            onChange={handleChange}
+          />
+          Deer
+        </label>
+        <label>
+          <input
+            type="radio"
+            id="cat"
+            name="animal"
+            value="cat"
+            onChange={handleChange}
+          />{" "}
+          Cat
+        </label>
+      </section>
+        </>)
+}
