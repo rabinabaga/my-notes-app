@@ -30,3 +30,16 @@
     color: #f31010;
   }
 }
+
+.pokemon-display{
+  margin-top: 20px;
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.thumb-container{
+  flex-basis: 300px;
+}
+

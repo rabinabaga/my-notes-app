@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import PokemonThumbnail from '../../pokemon-app/src/Components/PokemonThumbnail';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,9 +29,11 @@ function App() {
   return (
   <div className="app">
     <p className="heading">Pokemon Kingdom</p>
-    {pokemonList.map((pokemon, index)=>
+   <section className="pokemon-display">
+   {pokemonList.map((pokemon, index)=>
       <PokemonThumbnail key={index} name={name} image={pokemon.sprites.other.dream_world.front_default}/>
     )}
+   </section>
   </div>
   )
 }
