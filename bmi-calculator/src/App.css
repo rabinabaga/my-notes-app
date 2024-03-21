@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.app{
+  width: 40vw;
+height: fit-content;
+padding: 20px;
+  background-color: white;
+  margin: 30px auto;
+}
+
+.heading{
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  background-color: #1B1096;
+  padding: 24px;
+}
+section.result{
+  margin-top: 25px;
+  text-align: center;
+}
+
+section.result:first-child{
+  background-color: red;
+}
+.display-result{
+  background-color: #1B1096 ;
+  color: white;
+  border-radius: 35%;
+  margin: auto;
+  width: fit-content;
+  padding: 9px 15px;
+}
+.app-font{
+  font-size: 1.4em;
+}
+
+input{
+  margin: 10px;
+  width: 100%;
+  display: block;
+}
+
+section.main{
+  padding: 20px 40px;
+}
+
