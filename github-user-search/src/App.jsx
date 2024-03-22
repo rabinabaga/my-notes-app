@@ -53,7 +53,7 @@ function App() {
   }
     }
   
-const innerAccess = outer(handleChange);
+const innerAccess = outer(handleChange);//inner function with access to outer function and variables persistence across function calls
   return (
     <div className="app">
       <p className="heading">GitHub User Search</p>
