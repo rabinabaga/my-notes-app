@@ -1,3 +1,4 @@
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import FirebaseContext from "./context/firebase";
@@ -8,6 +9,7 @@ import {
   } from "react-router-dom";
 import Login from "./pages/login.jsx";
 import "./index.css"
+
 import SignUp from "./pages/sign-up.jsx";
 import Dashboard from "./pages/dashboard.jsx";
 import Notfound from "./pages/not-found.jsx";
