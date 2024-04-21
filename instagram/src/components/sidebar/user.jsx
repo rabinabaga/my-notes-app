@@ -5,7 +5,6 @@ import { memo } from "react";
 // import { DEFAULT_IMAGE_PATH } from '../../constants/paths';
 
 function User({ username, fullName }) {
-  console.log("username", username);
   return !username || !fullName ? (
     <Skeleton count={1} height={61} />
   ) : (

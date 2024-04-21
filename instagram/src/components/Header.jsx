@@ -1,16 +1,17 @@
-import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import FirebaseContext from '../context/firebase';
-import UserContext from '../context/user';
-import * as ROUTES from '../constants/routes';
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import FirebaseContext from "../context/firebase";
+import UserContext from "../context/user";
+import * as ROUTES from "../constants/routes";
 // import { DEFAULT_IMAGE_PATH } from '../constants/paths';
 // import useUser from '../hooks/use-user';
 
 export default function Header() {
   // const { user: loggedInUser } = useContext(UserContext);
 
-  const { user} = useContext(UserContext);
+  const { user } = useContext(UserContext);
   // const { user } = useUser(loggedInUser?.uid);
+
   const { firebase } = useContext(FirebaseContext);
   const navigate = useNavigate();
 
@@ -21,7 +22,11 @@ export default function Header() {
           <div className="text-gray-700 text-center flex items-center align-items cursor-pointer">
             <h1 className="flex justify-center w-full">
               <Link to={ROUTES.DASHBOARD} aria-label="Instagram logo">
-                <img src="/images/logo.png" alt="Instagram" className="mt-2 w-6/12" />
+                <img
+                  src="/images/logo.png"
+                  alt="Instagram"
+                  className="mt-2 w-6/12"
+                />
               </Link>
             </h1>
           </div>
@@ -43,7 +48,6 @@ export default function Header() {
                       d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                     />
                   </svg>
-                  
                 </Link>
 
                 <button
@@ -51,16 +55,15 @@ export default function Header() {
                   title="Sign Out"
                   onClick={() => {
                     firebase.auth().signOut();
-                    navigate(ROUTES.DASHBOARD)
+                    navigate(ROUTES.DASHBOARD);
                   }}
                   onKeyDown={(event) => {
-                    if (event.key === 'Enter') {
+                    if (event.key === "Enter") {
                       firebase.auth().signOut();
-                      navigate(ROUTES.LOGIN)
+                      navigate(ROUTES.LOGIN);
                     }
                   }}
                 >
-                  
                   <svg
                     className="w-8 mr-6 text-black-light cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"

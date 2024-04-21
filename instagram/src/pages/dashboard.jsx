@@ -8,7 +8,6 @@ export default function Dashboard() {
     const [count, setCount] = useState(3);
     return ( 
         <>
-        <button onClick={()=>setCount(count+1)}>{count}</button>
             <Header></Header>
           
             <div className="grid grid-cols-3 gap-4  justify-between mx-auto max-w-screen-lg ">
