@@ -6,6 +6,7 @@ export default function Timeline() {
   //  we need to get the logged in user's following's photos ( hook)
 
   const { photos } = usePhotos();
+  console.log("photos", photos);
 
   // on loading the photos, we need to use react skeleton
 

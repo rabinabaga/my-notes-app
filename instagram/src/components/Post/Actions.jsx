@@ -19,6 +19,7 @@ export default function Actions({
 
   const { firebase, FieldValue } = useContext(FirebaseContext);
 
+  //each toggelema update garna paro backend
   const handleToggleLiked = async () => {
     setToggleLiked((toggleLiked) => !toggleLiked);
 

@@ -7,25 +7,26 @@ import { useState } from "react";
 export default function usePhotos() {
   const [photos, setPhotos] = useState([]);
   const {
-    user: { uid: userId = "" },
-  } = useContext(UserContext);
+    user}
+   = useContext(UserContext);
 
   useEffect(() => {
     async function getTimelinePhotos() {
-      const usersFollowing = await getUserObjByUserId(userId);
+      //selecting the loggedinuser since array is returned
+      const usersFollowing = await getUserObjByUserId(user?.uid);
       const { following } = usersFollowing[0];
       let followedUserPhotos = [];
 
       //does the user acutally follow people
       if (following.length > 0) {
-        followedUserPhotos = await getPhotos(userId, following);
+        followedUserPhotos = await getPhotos(user?.uid, following);
       }
 
       followedUserPhotos.sort((a, b) => b.dateCreated - a.dateCreated);
       setPhotos(followedUserPhotos);
     }
     getTimelinePhotos();
-  }, [userId]);
+  }, [user?.uid]);
 
   return { photos };
 }
